@@ -33,14 +33,14 @@ package display
 			trace("ready");
 			requester = new RestCall(url, apiKey);
 			requester.addEventListener(Event.COMPLETE, processData);
-			fetch("GET", "items", { collection:1 } );
+			fetch("GET", "items", { collection:2 } );
 			
 			x = 0;
 			y = 0;
 			stage.addChild(this);
 		}
 				
-		private function fetch(type:String, endpoint:String, parameters:Object=null, useKey:Boolean=true):void 
+		private function fetch(type:String, endpoint:String, parameters:Object=null, useKey:Boolean=false):void 
 		{
 			requester.makeRequest(type, endpoint, parameters, useKey);
 		}
@@ -90,8 +90,9 @@ package display
 				container.addEventListener(GWGestureEvent.SCALE, scaleHandler);
 				container.addChild(loader);
 				this.addChild(container);
-				
-				loader.load(new URLRequest(data[i].file_urls.fullsize));		
+				if(data[i].mime_type == "image/jpeg"){ 
+					loader.load(new URLRequest(data[i].file_urls.fullsize));		
+				}
 			}
 		}
 		
