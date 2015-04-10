@@ -7,6 +7,7 @@ bin/*.swf
 
 # Other files and folders
 .settings/
+obj/*.xml
 
 #ignore content
 bin/library/assets
