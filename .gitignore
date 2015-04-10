@@ -1,47 +1,14 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
+# should NOT be excluded as they contain compiler settings and other important
+# information for Eclipse / Flash Builder.
 
-# Folder config file
-Desktop.ini
+#ignore compiled
+bin/*.swf
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Other files and folders
+.settings/
+obj/
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-# actionscript
-*.swf
-*.html
+#ignore content
+bin/library/assets
+bin/library/ui/_gsdata_
